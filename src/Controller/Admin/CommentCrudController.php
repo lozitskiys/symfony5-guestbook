@@ -6,7 +6,6 @@ use App\Entity\Comment;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Filters;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
 use EasyCorp\Bundle\EasyAdminBundle\Field\AssociationField;
-use EasyCorp\Bundle\EasyAdminBundle\Field\DateTimeField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\IdField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextareaField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextField;
@@ -27,8 +26,7 @@ class CommentCrudController extends AbstractCrudController
             TextareaField::new('text'),
             TextField::new('email'),
             AssociationField::new('conference'),
-            TextField::new('photoFilename'),
-            DateTimeField::new('createdAt')
+            TextField::new('photoFilename')
         ];
     }
 
